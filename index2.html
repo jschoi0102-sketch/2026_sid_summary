@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SID 2026 Paper Summaries - PPT Dashboard</title>
+    <style>
+        :root {
+            --primary: #007aff;
+            --bg: #f5f5f7;
+            --card-bg: #ffffff;
+            --text: #1d1d1f;
+            --text-secondary: #86868b;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        h1 { font-size: 48px; font-weight: 700; margin-bottom: 10px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1400px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card h2 { font-size: 24px; color: var(--primary); margin-top: 0; }
+        .card h3 { font-size: 18px; margin: 15px 0 10px 0; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .card p, .card li { font-size: 14px; line-height: 1.6; color: #424245; }
+        .card ul { padding-left: 20px; margin: 5px 0; }
+        .session-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .btn-copy {
+            background: #eee;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: auto;
+            align-self: flex-start;
+            font-size: 12px;
+            transition: background 0.2s;
+        }
+        .btn-copy:hover { background: #ddd; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SID 2026 Paper Summaries</h1>
+        <p style="color: var(--text-secondary);">PPT Slide Generation Dashboard</p>
+    </header>
+    <div class="grid">        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 13-1</span>
+            
+
+<h3>제목</h3>
+<li>New OLED TDDI Driver IC Architecture</li>
+
+<h3>저자</h3>
+<li>TsangChih WU, Huajun Zhuang</li>
+
+<h3>소속</h3>
+<li>Display & Touch Department, Xiaomi Co.Ltd. Beijing, China</li>
+
+<h3>시사점</h3>
+<li>샤오미(Xiaomi)가 자체적인 OLED TDDI(Touch and Display Driver Integration) 솔루션 개발에 매우 공격적임.</li>
+<li>"Single RAM DDIC" 및 "MUX in IC" 아키텍처를 통해 칩 면적을 46% 이상 줄이고, 소비 전력을 45mW 절감함.</li>
+<li>이는 모듈 두께를 줄이고 베젤 폭을 0.1~0.15mm 감소시켜 화면 대 본체 비율(Screen-to-body ratio)을 극대화하는 데 기여함.</li>
+<li>55nm에서 40nm 공정으로의 전환 및 아키텍처 최적화를 통해 약 10%의 비용 절감을 달성함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 패널에 있던 MUX 회로를 IC 내부로 통합하여 OLED TDDI의 고질적인 문제인 칩 크기 증가와 비용 문제를 해결한 혁신적인 사례임. 패널 설계와 IC 설계를 동시에 최적화하는 "협업 패널 설계(Collaborative Panel Design)"를 통해 높은 리프레시 레이트에서도 데이터 대역폭을 확보함.</li>
+<li>**기술수준 비교**: 삼성디스플레이는 이미 고수준의 통합 솔루션을 보유하고 있으나, 샤오미가 패널 구조(DDL 아키텍처)까지 변경하며 IC 최적화를 극대화하는 방식은 매우 위협적인 벤치마킹 포인트임. 특히 40nm 및 28nm 선단 공정을 터치 디지털 회로에 적극 도입하여 저전력 특성을 강화한 점은 당사의 통합 솔루션 전략에서도 지속적인 미세 공정 도입과 아키텍처 혁신이 필요함을 시사함.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 13-2</span>
+            
+
+<h3>제목</h3>
+<li>Development of Low-Cost, Low-Power Consumption, and Narrow-Frame IGZO Panels for IT (MFD&DeMUX)</li>
+
+<h3>저자</h3>
+<li>Tatsuya Kawasaki, Masafumi Sugino, Yohei Takeuchi, Kengo Hara, Kohji Saitoh, Satoshi Horiuchi, Daiji Kitagawa, Tetsuo Kikuchi, Hajime Imai, Tohru Daitoh</li>
+
+<h3>소속</h3>
+<li>Sharp Display Technology Corporation, Mie, Japan</li>
+
+<h3>시사점</h3>
+<li>샤프(Sharp)는 IT용(노트북, 태블릿) 패널에서 저비용, 저전력, 슬림 베젤을 달성하기 위해 BCE(Back-Channel Etch) 구조의 IGZO-TFT 기술에 집중하고 있음.</li>
+<li>MFD(Multi-Frequency Display) 기술을 도입하여 화면의 특정 영역(동영상)은 120Hz로, 나머지 정지 영역은 8Hz로 분할 구동함으로써 소비 전력을 36~55%까지 대폭 절감함.</li>
+<li>DeMUX(De-multiplexer) 기술을 통해 소스 드라이버 IC 수를 절반으로 줄여 원가를 절감하고, MFD와 조합 시에도 2.0mm의 좁은 베젤을 유지할 수 있음을 입증함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 화면 전체의 주사율을 조절하는 기존 방식에서 나아가, 한 화면 내에서 영역별로 주사율을 다르게 가져가는 MFD 기술을 IT 패널에 실용적으로 적용한 점이 큰 의의임. 특히 고전류 구동이 필요한 DeMUX 회로를 저비용 IGZO 공정으로 구현하여 경제성을 확보함.</li>
+<li>**기술수준 비교**: 당사의 LTPS/LTPO 기반 고성능 IT 패널 대비 샤프의 IGZO 솔루션은 성능 면에서는 열세일 수 있으나, 가성비를 중시하는 중저가 노트북 및 태블릿 시장에서는 매우 강력한 위협이 될 수 있음. 특히 다중 창 작업이 많은 IT 환경에서 부분 주사율 가변 기술(MFD)은 매우 유용한 벤치마킹 포인트이며, 당사에서도 원가 경쟁력 확보와 전력 효율 극대화를 위해 이러한 부분 가변 구동 기술의 도입 및 최적화 전략이 필요함.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 13-3</span>
+            
+
+<h3>제목</h3>
+<li>Seamless Switching Technology of Pixel Clock on AMOLED Notebook Display</li>
+
+<h3>저자</h3>
+<li>Zhong-Jie Wang, Chun-Cheng Guo, Xiao-Xu Li, Shuai Hou, Chun-Li Wei, Bin Zhang</li>
+
+<h3>소속</h3>
+<li>Chengdu BOE Optoelectronics Technology Co., Ltd., Chengdu, Sichuan, China</li>
+<li>Analogix (Suzhou) Semiconductor Co., Ltd., Suzhou, Jiangsu, China</li>
+
+<h3>시사점</h3>
+<li>BOE는 OLED 노트북의 저주사율 구동 시 발생하는 소비 전력 문제를 해결하기 위해 픽셀 클럭(Pixel Clock)과 eDP 전송 속도를 동적으로 조절하는 기술을 개발함.</li>
+<li>기존 LCD의 Seamless Panel Refresh Switching(SPRS) 방식을 OLED에 적용할 때 발생하는 화면 꺼짐, 플리커, 테어링 문제를 해결하기 위해 'Combine_H&V' 솔루션을 제안함.</li>
+<li>이 기술을 통해 TCON 로직 전력을 약 102mW(5.3%) 절감하고, eDP 인터페이스를 포함한 전체 시스템 전력을 약 200mW 절감하는 효과를 거둠.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: GPU에서 전송되는 픽셀 클럭을 낮추면서도 패널 단의 구동 클럭은 유지하여 화질(Delta Luminance < 1%) 저하 없이 시스템 레벨의 전력 소모를 줄인 점이 핵심임. 이는 픽셀 클럭 스위칭을 사용자의 눈에 보이지 않게(Eye-invisible) 구현한 업계 최초의 사례로 평가됨.</li>
+<li>**기술수준 비교**: 당사는 LTPO 기반의 패널 자체 가변 주사율 기술에서 세계 최고의 경쟁력을 보유하고 있으나, BOE의 접근 방식은 GPU-TCON 인터페이스 전력까지 최적화하는 시스템 통합 관점의 기술임. 특히 화질 유지와 전력 절감 사이의 밸런스를 잡기 위해 TCON 내부에 추가 버퍼(SPRS Buffer)를 배치하고 타이밍을 재생성(Timing Regeneration)하는 방식은 당사의 노트북용 고성능 구동 IC 설계 시 전력 효율을 극대화하기 위한 중요한 벤치마킹 포인트임. TCON 원가 상승과 시스템 복잡도 증가라는 트레이드오프가 있으나, 프리미엄 노트북 시장에서의 배터리 수명 경쟁력을 위해 당사 전략에 반영할 가치가 높음.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 13-4</span>
+            
+
+<h3>제목</h3>
+<li>A High-Refresh Rate and Large-Size OLED Display with DRD Gate Driver for Premium TVs</li>
+
+<h3>저자</h3>
+<li>Hong-Jae Shin, Yong-Ho Kim, Jae-Yi Choi, Hyun-Haeng Lee, Chang-Hoon Lee, Dong-Kyu Yang, Sung-Joon Bae, Tae-Lim Lee, Woo-Sup Shin, Hyeon-Woo Lee</li>
+
+<h3>소속</h3>
+<li>Large Display Business Unit, LG Display, Paju, Korea</li>
+
+<h3>시사점</h3>
+<li>LG디스플레이(LGD)는 프리미엄 TV 시장을 겨냥해 65인치 4K 대면적 OLED 패널에서 165Hz의 고주사율을 안정적으로 구현함.</li>
+<li>DRD(Double-Rate Driving) 방식과 듀얼 게이트(Dual-gate) 픽셀 구조를 도입하여 소스 드라이버 IC 개수를 기존 16개에서 8개로 절반이나 줄여 원가 경쟁력을 획기적으로 높임.</li>
+<li>게이트 라인 수 증가로 인한 베젤 확장을 막기 위해 기존 대비 면적을 50% 줄인 소형 GIP(Gate Driver in Panel) 회로를 개발, 베젤 폭을 약 33% 줄이는 데 성공함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 대형 OLED 패널에서 고해상도/고주사율 트렌드에 대응하면서도 드라이버 IC 비용을 절감하고 슬림 베젤 디자인을 유지할 수 있는 통합 솔루션을 제시함. 추가적인 마스크 공정 없이 기존 Oxide TFT 백플레인 공정을 그대로 활용하여 양산 효율성을 확보한 점이 큰 성과임.</li>
+<li>**기술수준 비교**: LGD는 대형 WOLED 패널 분야에서 원가 최적화 및 고주사율 구동 기술을 매우 공격적으로 고도화하고 있음. 삼성디스플레이의 QD-OLED가 화질 우수성을 강조하는 전략이라면, LGD는 구동 아키텍처 혁신(DRD, 소형 GIP)을 통해 프리미엄 TV의 대중화를 꾀하고 있음. 165Hz 고속 구동 시 80% 이상의 충전율을 확보한 구동 제어 기술과 초슬림 베젤을 가능케 하는 GIP 레이아웃 설계 기술은 당사의 대형 패널 경쟁력 강화를 위해 면밀히 분석하고 뛰어넘어야 할 핵심 벤치마킹 요소임.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 20-1</span>
+            
+
+<h3>제목</h3>
+<li>Advancing AR/VR: Innovative Strategies for Future Display Solutions</li>
+
+<h3>저자</h3>
+<li>Sug Woo Jung, Sangho Park, Sang-Myeon HAN, JAE BEOM CHOI</li>
+
+<h3>소속</h3>
+<li>Samsung Display Co. Ltd., Yongin-si, 17113, Republic of Korea</li>
+
+<h3>시사점</h3>
+<li>삼성디스플레이는 OLEDoS(OLED-on-Silicon)를 단순한 VR용 플랫폼을 넘어 AR 영역까지 확장 가능한 차세대 핵심 디스플레이 기술로 정의함.</li>
+<li>기존 WOLED-CF 방식의 한계를 극복하기 위해 RGB 직접 증착 방식을 도입, 휘도를 약 4배 향상시키고 색 순도를 대폭 개선함.</li>
+<li>5000 PPI 이상의 초고해상도 구현을 위한 FSM(Fine Silicon Mask) 기술, 누설 전류 억제 픽셀 구조, MLA(Micro Lens Array) 기반 광 추출 극대화 기술 등을 핵심 혁신 요소로 제시함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 당사의 RGB OLEDoS 기술이 마이크로 디스플레이 시장에서 µLEDoS(microLED-on-Silicon) 진영과 충분히 경쟁 가능함을 입증함. 특히 웨이브가이드(Waveguide) 방식의 AR 광학계에서 요구되는 고휘도와 높은 명암비(ACR)를 OLEDoS로도 달성할 수 있음을 보여줌으로써, 당사의 기술 로드맵에 대한 강한 자신감을 표명함.</li>
+<li>**기술수준 비교**: 본 논문은 당사 연구진의 성과를 직접 발표한 것으로, 삼성디스플레이가 전 세계 마이크로 디스플레이 기술 트렌드를 주도하고 있음을 보여줌. 경쟁사인 소니(Sony)가 주도하는 WOLED+CF 방식 대비 화질과 전력 효율 면에서 확실한 우위를 점하고 있으며, 미성숙한 µLED 기술 대비 양산성 확보에 유리한 CMOS 인프라 활용 전략은 당사의 시장 지배력을 공고히 할 핵심 무기임. FSM 기반의 서브 미크론 패턴 구현 능력은 업계 최고 수준으로 평가됨.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 20-2</span>
+            
+
+<h3>제목</h3>
+<li>A 1512 PPI Real RGB Glassed-OLED Display for VR</li>
+
+<h3>저자</h3>
+<li>Rongjuan Yang, Hefang Liu, Liangshuang Miao, Tingbin Zhang, Tianhong Wang, Haofeng Zhang, Jiangbo Yao, Jianfeng Yuan, Zhifu Li, Bin Zhao</li>
+
+<h3>소속</h3>
+<li>TCL China Star Optoelectronics Technology Co. Ltd (CSOT)</li>
+
+<h3>시사점</h3>
+<li>TCL CSOT는 유리기판(Glass substrate) 기반 OLED에서 세계 최고 수준인 1512 PPI 해상도를 Real RGB 방식으로 구현함.</li>
+<li>기존의 실리콘 기반 Micro-OLED(OLEDoS)가 가진 고비용 문제를 해결하기 위해, 성숙한 유리기판 공정을 활용하여 VR용 고해상도 디스플레이를 저가에 공급할 수 있는 기술적 토대를 마련함.</li>
+<li>초미세 배선 패턴(L+S ≤ 2.8μm) 구현을 위한 ACD OPC(Optical Proximity Correction) 보정 기술과 막질 간 스트레스 최적화 기술을 통해 공정 수율과 신뢰성을 확보함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 고가의 반도체 웨이퍼 대신 유리기판을 사용하여 1500 PPI 이상의 초고해상도를 달성함으로써, VR 기기의 대중화를 가로막는 원가 문제를 정면으로 돌파하려는 시도임. 2.56인치 크기에 2560x2740 해상도, 120Hz 주사율을 갖춰 상용화 수준의 스펙을 확보함.</li>
+<li>**기술수준 비교**: 당사는 3000 PPI 이상의 초고성능 OLEDoS(실리콘 기반) 시장을 선도하고 있으나, 중저가 VR 시장 대응을 위한 유리기판 기반 고해상도 기술에서는 TCL CSOT가 매우 공격적으로 추격하고 있음. 특히 유리기판 위에서 1500 PPI급 Real RGB를 안정적으로 구현한 것은 당사의 FMM(Fine Metal Mask) 증착 한계를 위협할 수 있는 수준임. 당사에서도 프리미엄 OLEDoS 외에, 원가 경쟁력을 갖춘 유리기판 기반의 고PPI OLED 기술(FMM 미세화 또는 신규 증착 기술)에 대한 벤치마킹과 전략적 대응이 필요함.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 20-3</span>
+            
+
+<h3>제목</h3>
+<li>A Study on the Design Scheme of a 2540 PPI Fast LCD for VR</li>
+
+<h3>저자</h3>
+<li>Yanqing Chen, Xinfang Li, Jinyao Wang, Shibiao Wang, Jie Tong, Jianyun Xie, Yunbo Zhang</li>
+
+<h3>소속</h3>
+<li>BOE CHUANGYUAN Technology Co., Ltd., Beijing, China</li>
+
+<h3>시사점</h3>
+<li>BOE는 OLEDoS(OLED-on-Silicon) 대비 원가 경쟁력이 뛰어난 Fast LCD를 통해 VR 시장을 공략하기 위해 2540 PPI 초고해상도 설계안을 제시함.</li>
+<li>기존의 Real RGB 대신 Delta 픽셀 구조를 채택하여 공정 난이도를 낮추면서도 서브픽셀 렌더링 알고리즘을 통해 체감 해상도를 극대화함.</li>
+<li>COA(Color filter-On-Array) 구조, 자기정렬 포토스페이서(Self-aligned PS), 1개 유닛으로 4개 행을 구동하는 멀티 게이트 GOA 기술을 통해 1mm 수준의 초슬림 베젤을 구현함.</li>
+<li>Mini-LED 직하형 백라이트(390 로컬 디밍 존)를 적용하여 LCD의 한계인 명암비를 대폭 개선하고 광색역(QD 필름 활용)을 확보함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: LCD 기술로도 2500 PPI 이상의 초고해상도를 구현할 수 있음을 입증하여, 고가의 OLEDoS 기기들과 화질 격차를 줄이면서도 경제성을 확보한 점이 핵심임. 특히 Delta 픽셀 구조를 통한 공정 마진 확보와 초슬림 베젤을 위한 GOA 설계 혁신은 매우 실용적인 접근임.</li>
+<li>**기술수준 비교**: 당사는 자발광 기반의 OLEDoS 기술에서 압도적인 화질 우위에 있으나, BOE의 2540 PPI Fast LCD는 보급형 VR 기기 시장에서 당사의 시장 점유율을 위협할 수 있는 강력한 대안 기술임. Mini-LED와 결합된 LCD는 암부 표현력에서도 상당 수준 올라와 있음. 당사의 OLEDoS 전략을 고수하되, 중저가 시장 대응을 위해 고PPI LCD에서 보여준 COA 공정 최적화 및 고개구율 확보 기술(자기정렬 PS 등)은 당사의 고해상도 패널 설계 시 반드시 벤치마킹해야 할 포인트임.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 20-4</span>
+            
+
+<h3>제목</h3>
+<li>High-performance Micro-OLED Technology Empowering 1,500ppi real RGB Glass-based VR Display</li>
+
+<h3>저자</h3>
+<li>Wenfeng Song, Rong Zhang, Lei An, Houchi Zhang, Guang Yang, Lei Mi, Weiqi Xu, Rubo Xing, Xiujian Zhu</li>
+
+<h3>소속</h3>
+<li>Beijing Visionox Technology Co., Ltd. (Visionox), Beijing, China</li>
+
+<h3>시사점</h3>
+<li>비전옥스(Visionox)는 유리기판(Glass-based) 기반의 1500 PPI 초고해상도 VR 디스플레이를 위한 고성능 Micro-OLED 기술을 발표함.</li>
+<li>포토리소그래피 공정으로 패턴화된 투명 ITO 층을 활용해 강력한 마이크로 캐비티(Micro-cavity) 효과를 구현, WOLED-CF 방식의 고질적 문제인 낮은 효율과 좁은 색영역을 극복함.</li>
+<li>2-stack B/RG 탠덤 구조에서 최대 33.8 cd/A의 높은 효율과 DCI-P3 기준 98% 이상의 광색역을 달성했으며, 시야각에 따른 색 변화(Color Shift)를 60도에서 delta u'v' < 0.02 수준으로 억제함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: TCL CSOT와 마찬가지로 비전옥스 역시 고가의 OLEDoS 대안으로 유리기판 기반의 1500 PPI급 고해상도 솔루션을 완성해 가고 있음. 특히 포토리소 공정을 이용한 ITO 두께 제어로 광학 설계를 최적화하고, ALD/CVD 하이브리드 인덱스 매칭 TFE(봉지) 기술을 통해 광 추출 효율을 극대화한 점은 기술적으로 매우 성숙한 단계에 진입했음을 의미함.</li>
+<li>**기술수준 비교**: 당사가 주도하는 FMM 기반 RGB 증착 기술이나 고가형 실리콘 기반 OLEDoS 시장과는 별개로, 유리기판 위에서 고해상도를 구현하는 중국 업체들의 추격이 매우 매서움. 비전옥스의 공정 정밀도(포토리소 기반 캐비티 조절)는 당사의 중저가 VR 패널 전략에서 반드시 벤치마킹해야 할 요소임. 당사에서도 원가 경쟁력이 높은 유리기판 기반의 고PPI 제품군을 위해 탠덤 구조 최적화 및 신규 봉지 재료/공정 도입을 통한 화질 초격차 유지가 필요함.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 44-1</span>
+            
+
+<h3>제목</h3>
+<li>OLED Display Exceeding 8000 ppi Using Crystal IO FETs</li>
+
+<h3>저자</h3>
+<li>Hidetomo Kobayashi, Susumu Kawashima, Toshihiko Saito, Hideaki Shishido, Yutaka Okazaki, Yuichi Yanagisawa, Akihiro Chida, Toshiyuki Isa, Daiki Nakamura, Koji Kusunoki, Tsutomu Murakawa, Kenichi Okazaki, Shunpei Yamazaki</li>
+
+<h3>소속</h3>
+<li>Semiconductor Energy Laboratory Co., Ltd. (SEL), Kanagawa, Japan</li>
+
+<h3>시사점</h3>
+<li>SEL은 결정성 산화물 반도체인 Crystal IO FETs(CAAC-IGZO 등)를 활용하여 8000 PPI를 초과하는 초고해상도 Micro OLED 디스플레이를 개발함.</li>
+<li>초고해상도에서 발생하는 화소 간 혼색 문제를 해결하기 위해 MML(Metal Maskless) 기술을 적용, 화소 정의의 정밀도를 극대화함.</li>
+<li>0.5인치 프로토타입을 통해 초고해상도 구현 가능성을 입증했으며, 향후 1인치 이상으로 확대 시 발생하는 데이터 처리 속도 및 소비 전력 문제를 해결하기 위해 'Foveated Mode'와 Crystal IO의 저누설 전류 특성을 활용할 계획임.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 현재 OLEDoS 시장의 주류인 3000~4000 PPI 수준을 두 배 이상 뛰어넘는 8000 PPI급 초고해상도 기술을 제시하여 차세대 XR 기기의 화질 한계를 크게 확장함. 특히 백플레인 소자로 실리콘 기반 CMOS가 아닌 결정성 산화물(Oxide)을 사용하여 초저소비전력과 고해상도를 동시에 달성하려는 시도가 돋보임.</li>
+<li>**기술수준 비교**: 당사는 실리콘 웨이퍼 기반의 OLEDoS(RGB 직접 증착 방식)에서 세계 최고의 경쟁력을 확보하고 있으나, SEL의 결정성 산화물 기반 백플레인 기술은 공정 원가와 대면적화 측면에서 당사의 Si-CMOS 방식에 도전이 될 수 있음. 또한 SEL이 채택한 MML 기술은 당사의 FMM 증착 정밀도 한계를 돌파할 수 있는 강력한 벤치마킹 대상임. 8000 PPI 구현을 위한 초미세 화소 설계 및 증착 제어 기술은 당사의 차세대 초고해상도 마이크로 디스플레이 로드맵 수립에 필수적으로 반영되어야 할 핵심 기술임.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 44-2</span>
+            
+
+<h3>제목</h3>
+<li>150,000nits Full-color Native RGB Single Junction 3,386PPI Micro-OLED</li>
+
+<h3>저자</h3>
+<li>Kuo-Cheng Hsu, Huei-Siou Chen, Li-Min Huang, Long-Ming Lu, Ker-Tai Chu</li>
+
+<h3>소속</h3>
+<li>INT-Tech Co., Ltd., Hsin-chu, Republic of China (Taiwan)</li>
+<li>Taizhou Guanyu Technology Co., Ltd., Taizhou city, China</li>
+
+<h3>시사점</h3>
+<li>대만 INT-Tech는 AR 기기의 야외 시인성 확보를 위해 150,000 nits라는 초고휘도를 달성한 0.39인치(3386 PPI) Native RGB Micro-OLED를 개발함.</li>
+<li>컬러필터(CF)를 사용하는 기존 WOLED 방식 대비 광 효율을 11배 향상시켰으며, 탠덤이 아닌 싱글 정션(Single Junction) 구조로도 고휘도를 구현함.</li>
+<li>'uNEEDXR'로 명명된 독자적인 시퀀셜 패터닝(Sequential Patterning) 기술을 통해 FMM 방식의 정밀도 한계와 공정 오염 문제를 극복함.</li>
+<li>동일 휘도 기준 WOLED-CF 대비 전류 밀도를 5배 낮게 구동할 수 있어 소자 수명을 획기적으로 연장함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: AR용 마이크로 디스플레이의 최대 과제인 휘도 문제를 15만 니트 달성으로 정면 돌파함. 컬러필터를 제거하여 광 손실을 원천 차단하고, 시퀀셜 패터닝으로 RGB 직접 증착의 양산성을 높이려는 시도가 돋보임. 1억 대 1 이상의 명암비를 통해 가상 이미지가 배경에 완벽히 녹아드는 고품질 AR 구현이 가능함.</li>
+<li>기술수준 비교: 당사는 RGB 직접 증착 OLEDoS 기술에서 세계 최고의 화질을 보유하고 있으나, INT-Tech가 제시한 15만 니트의 초고휘도 스펙은 당사의 AR용 로드맵에서도 매우 도전적인 수치임. 특히 탠덤 구조 없이 싱글 정션으로 고휘도를 달성한 점은 공정 간소화 및 원가 측면에서 당사가 참고해야 할 강력한 벤치마킹 포인트임. 당사 역시 야외용 AR 글래스 시장 주도를 위해 초고성능 RGB 소자 개발 및 마스크 리스(Mask-less) 또는 시퀀셜 패터닝 공정 고도화를 통한 휘도 극대화 경쟁이 필요함.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 44-3</span>
+            
+
+<h3>제목</h3>
+<li>High-Resolution OLED Microdisplay for Near-Eye Display Applications</li>
+
+<h3>저자</h3>
+<li>Kukjoo Kim, Jae-Won Lee, Chan-mo Kang, Jin-wook Shin, Dae Hyun Ahn, Wooseup Youm, Yong-Duck Kim, Yongjun Lee, Chul Woong Joo, Hyunsu Cho, Sukyung Choi, In Bok Baek, Byoung-Hwa Kwon, Nam Sung Cho, and Chun-Won Byun</li>
+
+<h3>소속</h3>
+<li>Electronics and Telecommunications Research Institute (ETRI), Daejeon, Republic of Korea</li>
+
+<h3>시사점</h3>
+<li>한국전자통신연구원(ETRI)은 국산 CMOS 백플레인(라온텍)을 기반으로 한 1.03인치(3386 PPI, 2560x2560) 고해상도 OLEDoS 플랫폼을 개발함.</li>
+<li>XR 기기 사용 시 발생하는 고질적인 문제인 '폭주-조절 모순(VAC, Vergence-Accommodation Conflict)'에 의한 어지럼증을 해결하기 위해 Super Multi-View(SMV) 디스플레이 기술을 적용함.</li>
+<li>마이크로 렌즈 어레이(MLA)와 공간 분할 방식(Spatial Multiplexing)을 결합하여 동공 내에 여러 시점의 영상을 생성함으로써 자연스러운 초점 조절 유도가 가능함을 입증함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: OLEDoS 패널 자체의 성능 향상을 넘어, XR 기기의 인체공학적 화질 개선(VAC 완화)을 위한 차세대 광학 아키텍처인 SMV와의 정합성을 성공적으로 검증함. 특히 국내 기술력(라온텍 CMOS 백플레인 등)을 결합한 통합 플랫폼으로서의 가치가 높음.</li>
+<li>**기술수준 비교**: 당사는 고해상도/고휘도 OLEDoS 패널 제조 기술에서 압도적인 우위에 있으나, ETRI의 이번 발표는 패널이 최종 세트의 광학 구조(SMV 등)와 결합되었을 때의 사용자 경험(시각적 편안함) 최적화에 초점을 맞추고 있음. 당사의 마이크로 디스플레이 전략에서도 패널 단독 스펙 경쟁을 넘어, 차세대 렌즈 및 광학 엔진(Light Field, SMV) 설계와 연동된 화질 최적화 알고리즘 및 픽셀 설계 기술에 대한 선제적인 검토가 필요함. 국내 소재/부품/장비 생태계와 연계한 시스템 레벨의 연구 협력 포인트로 활용 가치가 높음.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 44-4</span>
+            
+
+<h3>제목</h3>
+<li>Compact and Lightweight VR Glasses using Double Path Pancake Optics</li>
+
+<h3>저자</h3>
+<li>Naru Usukura, Kiyoshi Minoura, Yoshiko Honma</li>
+
+<h3>소속</h3>
+<li>Sharp Display Technology Corporation, Nara, Japan</li>
+<li>Kantatsu company, Tokyo, Japan</li>
+
+<h3>시사점</h3>
+<li>샤프(Sharp)는 VR 기기의 소형화와 경량화를 위해 기존 팬케이크(Pancake) 광학계의 낮은 광 효율(약 25%)을 개선한 'Double Path(DP) 팬케이크 광학계'를 제안함.</li>
+<li>새로운 광학 설계를 통해 기존 대비 약 1.8배 높은 광 추출 효율을 달성했으며, 이를 통해 디스플레이의 휘도 요구치를 낮추고 소비 전력 및 발열 문제를 동시에 해결함.</li>
+<li>텔레센트릭(Telecentric) 광학 시스템을 적용하여 0D에서 -9D까지 넓은 범위의 시력 보정(Diopter adjustment)이 가능하며, 보정 시에도 배율 변화와 화질 저하가 거의 없음.</li>
+<li>이 기술을 적용한 'Xrostella VR1' 안경형 VR 기기는 198g의 초경량 무게를 실현하여 착용감을 극대화함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: VR 광학계의 고질적 난제인 '광 손실'을 혁신적인 경로 설계로 돌파하여, 결과적으로 디스플레이 패널의 전력 효율을 간접적으로 높인 점이 핵심임. 초경량 VR 기기 구현을 위한 광학계와 패널 간의 통합 최적화 사례로서 큰 의미가 있음.</li>
+<li>**기술수준 비교**: 당사의 XR 기기 전략에서도 팬케이크 광학계는 필수 요소이나, 샤프가 보여준 1.8배의 광 효율 향상은 패널의 휘도 마진을 획기적으로 넓혀줄 수 있는 위협적인 기술임. 당사는 고휘도 OLEDoS 패널 자체의 성능에 집중하고 있으나, 샤프와 같이 광학계 효율 극대화를 통해 전체 세트의 전력 소모를 줄이는 접근 방식은 당사의 패널 설계 시 반드시 연계 검토해야 할 벤치마킹 포인트임. 특히 넓은 범위의 시력 보정 기능은 사용자 편의성 측면에서 당사 차세대 기기 설계에 반영이 시급함.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 56-1</span>
+            
+
+<h3>제목</h3>
+<li>The New CMOS GOA Circuit with Partitioned Frequency Division Function in AMOLED</li>
+
+<h3>저자</h3>
+<li>Huanxi Zhang, Xiaolei Zhang, Lei Wu, Shaojing Wu, Hong Fang, Zuomin Liao, Mingzhou Wu, Juncheng Xiao, Chao Dai</li>
+
+<h3>소속</h3>
+<li>Wuhan China Star Optoelectronics Semiconductor Display Technology Corporation (CSOT), Wuhan, China</li>
+
+<h3>시사점</h3>
+<li>TCL CSOT는 스마트폰 등에 사용되는 8T2C LTPO 픽셀 구조에서 게이트 신호 종류가 증가함에 따라 발생하는 소비 전력 및 베젤 문제를 해결하기 위한 새로운 GOA(Gate-on-Array) 아키텍처를 제시함.</li>
+<li>기존의 Nscan GOA와 Pscan GOA 유닛을 하나의 CMOS 통합 유닛으로 합쳐, IC 소비 전력을 구동 모드에 따라 8.36%~9.81% 절감함.</li>
+<li>유닛 통합을 통해 패널 좌우 베젤 폭을 약 75μm~100μm 추가로 줄이는 데 성공함.</li>
+<li>'분할 주사율 제어(Partitioned Frequency Division)' 기능을 통해 Nscan과 Pscan 신호를 독립적으로 제어할 수 있어 저주사율 구동 시 효율을 극대화함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: LTPO 패널의 복잡한 구동 방식을 단순화하고 효율화하기 위해 회로 레벨에서의 통합(CMOS GOA)을 이뤄낸 점이 큼. 단순히 면적을 줄이는 것에 그치지 않고, 주사율 분할 구동이라는 고도화된 제어 기능을 통합 유닛 내에서 구현하여 저전력 특성을 강화함.</li>
+<li>**기술수준 비교**: 당사는 LTPO 및 저전력 구동 분야에서 세계 최고 수준의 원천 기술을 보유하고 있으나, 중국 CSOT의 이번 발표는 GOA 회로의 통합 설계 정밀도와 베젤 슬림화 측면에서 상당한 수준에 도달했음을 보여줌. 100μm 수준의 베젤 감소는 프리미엄 모바일 시장에서 디자인 경쟁력의 차이를 만들 수 있는 수치임. 당사 역시 8T2C 이상의 복잡한 픽셀 회로 대응을 위해 GOA 유닛의 극소형화 및 구동 전압 최적화 기술을 지속적으로 고도화하여 초격차를 유지해야 함. 특히 분할 주사율 제어 기술의 안정성 확보는 당사 제품의 화질 및 전력 경쟁력 강화의 핵심 포인트임.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 56-2</span>
+            
+
+<h3>제목</h3>
+<li>Design Scheme of LTPS Pixel Circuit for Enhanced Threshold Compensation of Driving TFT</li>
+
+<h3>저자</h3>
+<li>Qian Xu, Cong Liu, Binyan Wang, BO SHI, Yinglong Huang, Haijun Qiu</li>
+
+<h3>소속</h3>
+<li>Chengdu BOE Optoelectronic Technology Co., Ltd. (BOE), Chengdu, China</li>
+
+<h3>시사점</h3>
+<li>BOE는 LTPS TFT 기반 AMOLED 패널에서 구동 TFT의 문턱전압(Vth) 보정 정밀도를 높이기 위한 새로운 픽셀 회로 설계안을 제시함.</li>
+<li>기존 방식은 빛 차단층(LS, Light Shield)을 고정된 VDD 전압에 연결하지만, 이 경우 보정(Compensation) 단계와 발광(Emission) 단계에서 소스(Source) 전압이 달라져 바디 이펙트(Body Effect)에 의한 Vth 미스매치가 발생함.</li>
+<li>이를 해결하기 위해 LS 층을 구동 TFT의 소스 단자에 직접 연결하는 'LS Source Follower' 구조를 제안, 전 구간에서 VLS-Vs = 0을 유지함으로써 이상적인 Vth 보정 및 휘도 균일성을 달성함.</li>
+<li>새로운 7T-1C 픽셀 회로를 통해 고계조와 저계조 모두에서 화질 저하 없이 안정적인 보정이 가능함을 입증함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 소자의 물리적 특성(바디 이펙트)에 의한 보정 한계를 회로 설계 혁신으로 극복하려는 시도임. 특히 고PPI, 고화질이 요구되는 프리미엄 패널에서 발생할 수 있는 미세한 휘도 불균일 문제를 근본적으로 차단할 수 있는 실용적인 솔루션을 제시한 점이 큰 의의가 있음.</li>
+<li>**기술수준 비교**: 당사는 AMOLED 보정 회로 분야에서 세계 최고의 기술력을 보유하고 있으며, 이미 양산 제품에서 다양한 방식의 LS 전위 제어 기술을 고도화하여 적용 중임. BOE의 이번 발표는 중국 업체들이 단순 패널 제조를 넘어 픽셀 회로의 정밀 제어 및 물리적 현상 분석 능력에서도 상당한 수준에 올라와 있음을 보여줌. 당사의 차세대 고성능 패널(LTPO 등) 설계 시, 소자 특성 변동에 더 강건한(Robust) 보정 회로 아키텍처를 선제적으로 확보하여 화질 초격차를 유지해야 함. BOE가 제시한 7T-1C 회로의 효율성과 안정성을 면밀히 분석하여 당사 회로 설계의 벤치마킹 자료로 활용할 필요가 있음.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 56-3</span>
+            
+
+<h3>제목</h3>
+<li>Novel Double Rate Driving Pixel Structure for High-Performance 4K 165Hz OLED TVs with Reduced Number of Source Driver ICs</li>
+
+<h3>저자</h3>
+<li>Won-Ho Lee, Young-Min Jeong, Sang-Hoon Jung, Jun-Young Yang, Soo-Young Yoon</li>
+
+<h3>소속</h3>
+<li>Advanced Technology Laboratory, LG Display, Seoul, Korea</li>
+
+<h3>시사점</h3>
+<li>LG디스플레이(LGD)는 대면적 4K 165Hz OLED TV에서 드라이버 IC 개수를 절반으로 줄이면서도 고성능을 유지할 수 있는 혁신적인 DRD(Double Rate Driving) 픽셀 구조를 개발함.</li>
+<li>기존 DRD 방식은 인접한 서로 다른 색상의 화소를 하나의 데이터 라인에 연결하여 데이터 전환(Transition)이 빈번하고 이로 인한 발열(SD-IC 온도 상승)이 심각했으나, LGD는 '링크 브랜치(Link branch)'를 도입하여 동일 색상의 화소끼리 데이터 라인을 공유하도록 설계함.</li>
+<li>이를 통해 데이터 전환 횟수를 획기적으로 줄여 소스 드라이버 IC의 온도를 기존 DRD 대비 약 50% 낮추는 데 성공함.</li>
+<li>또한 '프레임 교차 구동(AFD, Alternate Frame Driving)' 기술(Z-구동과 S-구동을 프레임별로 교차)을 적용하여 특정 패턴(h1by1, dot pattern)에서 발생할 수 있는 휘도 불균일 문제를 해결함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 대형 OLED TV 시장에서 원가 경쟁력(IC 50% 감축)을 확보하면서도 고주사율(165Hz) 구현 시 발생하는 발열과 화질 저하 문제를 동시에 해결한 매우 실용적이고 강력한 솔루션임. 특히 드라이버 IC 발열을 절반으로 줄인 것은 제품의 신뢰성 향상과 슬림한 모듈 설계에 직접적인 기여를 함.</li>
+<li>**기술수준 비교**: LGD는 대형 WOLED 패널의 구동 아키텍처 효율화 측면에서 독보적인 완성도를 보여주고 있음. 삼성디스플레이의 대면적 패널 전략에서도 프리미엄 라인업의 원가 경쟁력 제고를 위해 이러한 고도화된 DRD 기술 도입이 필수적임. LGD의 '동일 색상 화소 연결' 컨셉과 'AFD 알고리즘'은 당사의 대형 패널 설계 시 핵심적인 벤치마킹 포인트이며, 발열 제어와 화질 균일성 확보라는 두 마리 토끼를 잡기 위한 당사만의 차별화된 구동 IP 확보가 시급함.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 56-4</span>
+            
+
+<h3>제목</h3>
+<li>An Embedded Gate Driver Architecture for Scalable Large-Area OLED Displays</li>
+
+<h3>저자</h3>
+<li>Dahye Shim, Seok Gyu Hong, Soyoung Lee, Yong-Min Jeong, Eui-Hyun Chung, Chul Nam, Sanghoon Jung, Joonyoung Yang, Hyun Jae Kim</li>
+
+<h3>소속</h3>
+<li>Yonsei University, Seoul, Korea</li>
+<li>LG Display, LG Science Park, Seoul, Korea</li>
+
+<h3>시사점</h3>
+<li>LG디스플레이(LGD)와 연세대학교 연구팀은 초대형 및 비정형(Free-form) OLED 디스플레이(특히 30인치 이상의 차량용 대시보드 디스플레이)에서 발생하는 게이트 신호 지연(RC Delay) 문제를 해결하기 위한 새로운 아키텍처를 제안함.</li>
+<li>기존의 베젤(Bezel)에 위치한 GIP 방식은 패널 중심부로 갈수록 신호 왜곡이 심해져 문턱전압(Vth) 보정 불균일과 휘도 저하를 야기하지만, 제안된 방식은 게이트 드라이버 유닛을 화면 활성 영역(Active Array) 내부에 분산 배치(Embedded)함.</li>
+<li>이를 통해 신호 전달 경로를 여러 구간으로 나누어 패널 크기에 관계없이 일정한 게이트 타이밍을 확보할 수 있게 함(27인치 프로토타입에서 균일한 신호 특성 검증).</li>
+<li>기존 LTPS 공정 및 회로 설계를 수정 없이 그대로 활용할 수 있어 양산 적용성이 높음.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 차량용 디스플레이가 50인치 이상의 초대형 'Pillar-to-Pillar' 형태로 진화함에 따라 물리적인 한계에 부딪힌 게이트 구동 방식을 회로 배치 혁신으로 돌파함. 분산 신호 주입(Distributed signal injection)을 통해 대형 패널에서도 중소형 패널 수준의 정밀한 화질 제어가 가능함을 입증한 점이 큰 의의임.</li>
+<li>**기술수준 비교**: 당사 또한 프리미엄 차량용 OLED 시장의 리더로서 대형화에 따른 신호 지연 해결 기술을 보유하고 있으나, LGD가 학계와 협력하여 AA 영역 내 드라이버 임베디드 기술을 공정 호환성까지 고려해 구체화한 점은 매우 위협적인 벤치마킹 포인트임. 화면 내부에 드라이버 소자가 배치됨에 따라 발생할 수 있는 개구율 손실 및 픽셀 회로와의 간섭(Capacitive Coupling)을 전기적 차폐(Shielding) 기술로 해결한 노하우는 당사의 차세대 초대형 차량용 패널 설계 시 반드시 심도 있게 분석하고 기술적 우위를 확보해야 할 영역임.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 72-1</span>
+            
+
+<h3>제목</h3>
+<li>Color Sequential Tandem (CST) Driving Method for Micro-LED Panels</li>
+
+<h3>저자</h3>
+<li>Y.-S. Huang, et al.</li>
+
+<h3>소속</h3>
+<li>AUO Corporation (대만)</li>
+
+<h3>시사점</h3>
+<li>AUO는 마이크로 LED 패널의 전력 소모와 순간 peak 전류를 줄이기 위한 'Color Sequential Tandem (CST)' 구동 방식을 제안함.</li>
+<li>한 프레임을 두 개의 서브 프레임으로 나누어 구동하며, 서브 프레임 간 전류 재조합(Current Recombination) 기술을 통해 특정 색상(Red 등) 구동 시 타 색상의 전류를 활용하는 방식을 채택함.</li>
+<li>이를 통해 화질(휘도, 색도) 저하 없이 패널 전류를 10%~55% 줄이고, 소비 전력을 최대 33%까지 절감함.</li>
+<li>추가적인 LED 칩 비용 발생 없이 구동 알고리즘만으로 효율을 높인 것이 특징임.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 마이크로 LED의 고질적인 과제인 높은 전력 소모 문제를 구동 아키텍처의 혁신(컬러 시퀀셜 + 탠덤)으로 해결함. 특히 순간적인 전력 부하를 분산시켜 전원 회로(Power line)의 설계를 용이하게 하고 모듈 발열을 줄인 점이 실용적인 성과임. 차량용 HUD 및 AR 기기와 같이 고휘도와 저전력이 동시에 요구되는 제품군에 최적화된 기술임.</li>
+<li>**기술수준 비교**: 당사는 마이크로 LED의 화소 미세화 및 전사 기술에서 앞서 있으나, AUO의 이번 발표는 전력 효율 극대화를 위한 '구동 알고리즘' 측면에서 상당한 아이디어를 보여줌. 삼성디스플레이의 마이크로 LED 전략에서도 고휘도 구현 시 발생하는 발열과 전력 문제를 해결하기 위해 AUO의 CST와 같은 시퀀셜 구동 방식의 도입 및 당사만의 고유한 전류 제어 IP 확보가 필요함. 특히 차량용 디스플레이 시장 주도를 위해 이러한 저전력 구동 기술은 반드시 확보해야 할 경쟁력임.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 72-2</span>
+            
+
+<h3>제목</h3>
+<li>Eutectic-Free MicroLED and OTFT Integration: A Scalable Solution Across Display Generations</li>
+
+<h3>저자</h3>
+<li>Chia-Hung Tsai, Simon Ogier, Doil Kim, Fang-Chung Chen, Hao-Chung Kuo</li>
+
+<h3>소속</h3>
+<li>National Yang Ming Chiao Tung University (대만)</li>
+<li>Smartkem Limited (영국)</li>
+
+<h3>시사점</h3>
+<li>대만 국립 양명교통대와 영국 Smartkem은 마이크로 LED의 양산 병목 구간인 전사(Mass Transfer)와 공정 본딩(Eutectic Bonding) 문제를 해결하기 위해 'Chip-first' 방식의 통합 전략을 제안함.</li>
+<li>유연한 PEN 기판 위에 마이크로 LED 칩을 먼저 배치한 후, 그 위에 120°C 미만의 저온 공정으로 유기 트랜지스터(OTFT) 백플레인을 직접 형성함.</li>
+<li>이 방식은 칩 전사 후 개별 본딩을 수행하는 기존의 'Chip-last' 방식 대비 공정을 단순화하고, 열에 민감한 부품의 손상을 방지하여 99.99% 이상의 높은 전기적 연결 수율을 달성함.</li>
+<li>결과적으로 고해상도 구현이 가능하며 유연성(Flexibility)과 투명성(Transparency)을 동시에 확보한 마이크로 LED 디스플레이 제작이 가능함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 수백만 개의 마이크로 LED 칩을 백플레인에 하나씩 옮기고 붙이는 고난도의 공정 대신, 칩을 미리 깔아두고 반도체 공정(Via formation)으로 연결하는 '모놀리식(Monolithic)' 방식의 접근을 통해 양산성을 획기적으로 높인 점이 핵심임. 특히 저온 OTFT 기술을 결합하여 폴리머 기판의 변형 문제를 해결함.</li>
+<li>**기술수준 비교**: 당사는 고성능 LTPS 백플레인 기반의 마이크로 LED TV 양산 기술력을 보유하고 있으나, 유연/투명 디스플레이 시장 대응을 위한 원가 경쟁력 확보 및 대면적 수율 안정화 측면에서 'Chip-first' 방식은 매우 매력적인 대안임. 대만 연구진이 보여준 비아 기반 연결(Via-based interconnects) 기술은 당사의 전사 공정 한계 돌파를 위한 중요한 벤치마킹 포인트이며, 향후 초소형/초경량 XR 기기 및 투명 사이니지용 패널 설계 시 공정 단순화를 통한 원가 절감 전략으로 적극 검토할 가치가 있음.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 74-1</span>
+            
+
+<h3>제목</h3>
+<li>Control of the Shadow Mura in AMOLED Displays</li>
+
+<h3>저자</h3>
+<li>Xun Fu, Ke-Chao Song, Sang-Ho Jeon, Lei Zheng, Yi Zhou, Ming-Hui Hou, Zheng-Ping Xiong, Guo-Wei Su, Bin Zhang</li>
+
+<h3>소속</h3>
+<li>BOE Technology Group Co., Ltd.</li>
+
+<h3>시사점</h3>
+<li>BOE는 고온 및 고휘도 조건에서 AMOLED 패널에 발생하는 '쉐도우 무라(Shadow Mura)' 현상의 원인을 규명하고 해결책을 제시함.</li>
+<li>분석 결과, 이 현상은 스위칭 TFT(T1, T3)의 누설 전류(Off-state leakage current)에 의해 발생하며, 특히 고온에서 전하 이동도가 변하고 문턱전압(Vth)이 드리프트되면서 누설 전류가 급증하는 것이 핵심 원인임.</li>
+<li>채널 도핑 농도(보론 주입량)를 기존 1x10^12 ions/cm^2에서 4x10^11 ions/cm^2로 낮춰 스위칭 TFT의 Vth를 음의 방향으로 이동(Negative shift)시킴으로써 누설 전류를 억제함.</li>
+<li>실험 결과, 무라 발생 불량률을 기존 35%에서 0% 수준으로 획기적으로 개선하였으며, 추가 비용 없이 공정 조건 최적화만으로 신뢰성을 확보함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 고휘도 디스플레이 구동 시 발생하는 미세한 화질 결함의 물리적 메커니즘을 밝히고, 픽셀 회로 내 스위칭 소자의 특성 제어(도핑 최적화)가 전체 화질 균일성에 미치는 영향을 입증한 점이 큰 성과임.</li>
+<li>**기술수준 비교**: 당사는 소자의 미세 누설 전류 제어 및 고온 신뢰성 확보 측면에서 업계 최고의 기술력을 보유하고 있으나, BOE가 가혹 조건(고온+고휘도)에서의 특정 불량을 타겟팅하여 공정 정밀도를 높이고 있는 점은 주목해야 함. 특히 중국 업체들의 분석 능력이 당사 수준에 근접하고 있어, 당사 역시 차세대 고휘도 패널(차량용, 프리미엄 스마트폰 등) 설계 시 스위칭 소자의 Vth 마진 확보 및 누설 전류 차단 기술을 더욱 고도화해야 함. BOE의 도핑 최적화 수치(4x10^11)는 당사 공정 마진과 비교 검토할 만한 가치가 있는 데이터임.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 74-2</span>
+            
+
+<h3>제목</h3>
+<li>A Study on Low-Brightness Color Shift and Mura in AMOLED LTPO Displays under Full DC Dimming: Challenges, Modeling, Mitigation</li>
+
+<h3>저자</h3>
+<li>Xinquan Chen, Huiming Wang, Wenquan Chu, Ke Liu, Weibin Zhang, Ran Chen, Ying Shen</li>
+
+<h3>소속</h3>
+<li>Hefei Visionox Technology Co., Ltd. (Visionox)</li>
+
+<h3>시사점</h3>
+<li>비전옥스(Visionox)는 사용자의 눈 건강(Eye health)과 플리커 프리 특성을 위해 AMOLED LTPO 패널에서 'Full DC Dimming' 기술을 구현할 때 발생하는 저휘도 화질 문제를 분석함.</li>
+<li>Full DC 디밍은 저휘도에서 TFT가 서브-임계 영역(Sub-threshold region)에서 동작하게 되어 공정 편차에 의한 무라(Mura)와 색 편차(Color Shift)가 급격히 심화되는 단점이 있음.</li>
+<li>이를 해결하기 위한 3가지 전략 제시:</li>
+     - **Zoned S.S.(Subthreshold Swing)**: 고전류 영역에서는 작은 S.S. 값을, 저전류 영역에서는 큰 S.S. 값을 갖도록 TFT 특성을 설계하여 계조 표현력을 높임.
+     - **Multi-Demura**: AI 알고리즘을 활용해 모듈의 위치와 무라 패턴을 인식하고 적응형으로 보정하는 고도화된 디무라 기술 적용.
+     - **Differentiated VGSP**: 저휘도 구간에서 감마 기준 전압(VGSP)을 높여 구동 IC의 전압 제어 정밀도를 확보함.
+<li>결과적으로 저휘도(2 nits)에서 색 균일성(delta E)을 35% 이상 개선하여 양산 가능한 수준의 화질을 확보함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 기존의 하이브리드(DC+PWM) 방식 대신 전 구간 DC 디밍을 달성하기 위해 '소자 특성 설계 + AI 보정 + IC 제어'를 통합한 시스템 레벨의 솔루션을 구축한 점이 큰 의의임. 특히 소자의 물리적 특성인 S.S.를 영역별로 가변하는 'Zoned S.S.' 컨셉은 매우 영리한 접근임.</li>
+<li>**기술수준 비교**: 당사는 LTPO 가변 구동 및 저계조 화질 제어 분야에서 독보적인 원천 기술을 보유하고 있으나, 비전옥스가 '시력 보호'라는 소비자 가치를 앞세워 Full DC 디밍 기술의 완성도를 높이고 있는 점은 당사의 모바일 패널 전략에 시사하는 바가 큼. 당사 역시 AI 기반의 실시간 화질 보정 기술을 강화하고, 비전옥스의 Zoned S.S.와 같이 저계조 구동 환경에 최적화된 신규 소자 구조 및 감마 제어 알고리즘을 선제적으로 도입하여 프리미엄 시장에서의 화질 경쟁 우위를 공고히 해야 함.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 74-3</span>
+            
+
+<h3>제목</h3>
+<li>8.3-inch 1058-ppi Crystal Indium Oxide Display with Side-by-side Method Using Fine Metal Mask and Partition Wall Dividing OLED between Sub-pixels</li>
+
+<h3>저자</h3>
+<li>Shingo Eguchi, Tomoya Aoyama, Sho Kato, Takayuki Oide, Seiko Inoue, Sachiko Yamagata, Daisuke Kubota, Koji Kusunoki, Satoru Idojiri, Yasutaka Nakazawa, Rai Sato, Shunpei Yamazaki</li>
+
+<h3>소속</h3>
+<li>Semiconductor Energy Laboratory Co., Ltd. (SEL), Japan</li>
+
+<h3>시사점</h3>
+<li>SEL은 기존 FMM(Fine Metal Mask) 장비를 그대로 활용하면서도 1000 PPI 이상의 초고해상도를 구현할 수 있는 'SFM2(Super Fine Metal Mask)' 기술을 개발함.</li>
+<li>핵심은 패널 내부 서브픽셀 사이에 역삼각형 단면의 '격벽(Partition Wall)'을 세워, 증착 과정에서 유기물 막이 격벽에 의해 저절로 끊어지게 만드는 것임.</li>
+<li>이를 통해 500 PPI 수준의 마스크 정밀도로도 1000 PPI급 해상도를 달성할 수 있으며, 'OCTILE'이라는 새로운 픽셀 배열을 도입하여 개구율과 공정 마진을 확보함.</li>
+<li>8.3인치 8K(1058 PPI) OLED 패널을 통해 기술력을 입증했으며, 고해상도 구현 시 발생하는 화소 간 간섭 및 누설 전류 문제를 격벽 구조로 효과적으로 차단함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: FMM 마스크의 미세 구멍 가공 한계를 패널의 구조적 혁신(격벽 도입)으로 우회하여 해결한 점이 매우 창의적이고 실용적임. 고가의 초정밀 마스크 없이도 기존 설비의 부가가치를 극대화할 수 있는 양산 지향적 기술임. 또한 고해상도 패널에서 뇌의 착시를 이용한 무안경 3D 효과(Natural 3D)를 확인한 점도 차별화 요소임.</li>
+<li>**기술수준 비교**: 당사는 FMM 기반 RGB 증착 분야에서 세계 최고의 양산 수율과 정밀도를 보유하고 있으나, 1000 PPI를 넘어가는 중대형 패널(태블릿, 노트북 등)에서는 FMM 처짐과 정렬 정밀도가 큰 도전 과제임. SEL의 SFM2 방식은 이러한 물리적 한계를 극복할 수 있는 강력한 대안 기술로서 당사의 중대형 고해상도 로드맵에 위협이 될 수 있음. 당사 역시 마스크 미세화와 병행하여 패널 내부에 증착 가이드 구조를 도입하는 하이브리드 패터닝 기술을 적극 벤치마킹하고, 화소 배열 최적화를 통한 체감 화질 향상 전략을 고도화해야 함.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 91-1</span>
+            
+
+<h3>제목</h3>
+<li>Breaking the Under-Display Camera’s Dilemma Between Diffraction and Pixel Density Using Incoherent Pupil Synthesis</li>
+
+<h3>저자</h3>
+<li>Xinni Xie, Qimeng Wang, Yi Liu, Bo-Ru Yang, Zong Qin</li>
+
+<h3>소속</h3>
+<li>Sun Yat-Sen University (중국 중산대학교)</li>
+
+<h3>시사점</h3>
+<li>UDC(Under-Display Camera)의 해상도 유지와 화질 저하(회절 현상) 사이의 트레이드오프 문제를 해결하기 위해 '비간섭 동공 합성(Incoherent Pupil Synthesis)' 기술을 제안함.</li>
+<li>카메라 동공(Pupil) 영역을 나누어 서로 직교하는 편광판이나 시간차 셔터를 배치함으로써, 각 영역을 통과하는 빛이 서로 간섭하지 않게 함.</li>
+<li>각 영역에 대응하는 패널의 픽셀 구조를 서로 다르게 설계하여, 개별적으로는 화질 복원이 어려운 광학 전달 함수(OTF)의 빈틈(Gap)들을 합성을 통해 상호 보완적으로 제거함.</li>
+<li>결과적으로 고PPI 패널을 유지하면서도 회절에 의한 이미지 블러를 획기적으로 개선하여 선명한 이미지 복원이 가능함을 실험으로 증명함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: UDC의 한계인 물리적 회절 현상을 패널의 투과율 개선이라는 정공법 대신, 광학적인 '비간섭 합성'이라는 신개념으로 우회하여 해결한 점이 매우 혁신적임. 특히 직교 편광판과 같이 구현이 용이한 부품을 활용하여 복원 가능한 정보량(OTF Magnitude)을 극대화한 것은 차세대 UDC 설계의 새로운 방향성을 제시함.</li>
+<li>**기술수준 비교**: 당사는 세계 최초 UDC 상용화 브랜드로서 픽셀 미세화 및 AI 기반 화질 복원 기술에서 앞서 있으나, 중산대학교의 이번 연구는 패널 레이아웃과 카메라 광학계의 '공동 설계(Co-design)'를 통해 물리적 한계를 극복하려는 시도임. 당사의 차세대 UDC 전략에서도 단순히 투과율을 높이는 단계를 넘어, 렌즈 단의 특수한 필터(편광 등)와 연동된 비대칭 픽셀 설계 등을 통해 정보 손실을 최소화하는 '계산적 디스플레이(Computational Display)' 기술을 적극 벤치마킹하고 당사만의 고유 특허로 확보할 필요가 있음.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 91-2</span>
+            
+
+<h3>제목</h3>
+<li>A New Design for CUP to Reduce Reflection and Diffraction Based on LTPO and CFOT</li>
+
+<h3>저자</h3>
+<li>Chong Qian, Siyu Chen, Ye Jin, Qing He, Fengsheng Lu, Shuangying Cao</li>
+
+<h3>소속</h3>
+<li>Tianma Micro-Electronics Co., Ltd. (중국 티안마)</li>
+
+<h3>시사점</h3>
+<li>티안마(Tianma)는 저전력 LTPO 및 CFOT(Color Filter On Touch, POL-less) 기술이 적용된 패널에서 CUP(Camera Under Panel, UDC)의 성능을 최적화하는 새로운 설계안을 제시함.</li>
+<li>CFOT 패널에서 CUP 적용 시 발생하는 주요 문제인 높은 반사율과 '링 모양 무라(Ring-shaped mura)'를 해결하기 위해 다음과 같은 기술 적용:</li>
+     - **링 무라 해결**: 카메라 영역의 BM(Black Matrix) 빈 공간을 OC(Overcoat)로 채워 컬러필터 두께를 균일하게 유지함으로써 휘도 편차 제거.
+     - **저반사 구현**: 외부 광을 흡수하는 'Gray OC' 재료와 캐소드 패터닝(CPM) 기술을 도입하여 카메라 영역 반사율을 7.5%까지 낮춤(투과율 19.5% 확보).
+     - **화질 최적화**: 4x4 픽셀 유닛 구조를 통해 경계부 색 편차를 방지하고, ITO 배선을 사蛇행(Serpentine) 패턴으로 설계하여 휘도 균일성을 75%에서 82%로 향상.
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: POL-less(당사명 COE)와 UDC를 통합할 때 발생하는 광학적 난제들을 신규 재료(Gray OC)와 정밀한 회절 제어 레이아웃으로 돌파함. 특히 UDC 영역이 사용자 눈에 띄지 않게 하기 위해 일반 영역과의 반사율 차이를 1.8% 이내로 좁힌 점이 기술적 성과임.</li>
+<li>**기술수준 비교**: 당사는 Galaxy Z Fold 시리즈를 통해 COE와 UDC 통합 양산 기술에서 세계 최고의 노하우를 보유하고 있으나, 티안마가 투과율 19.5%라는 높은 수치를 유지하면서 반사율을 7%대로 제어한 점은 위협적인 벤치마킹 요소임. 당사 역시 UDC 영역의 '숨김 성능'을 극대화하기 위해 티안마가 사용한 Gray OC와 같은 기능성 유기막 도입 및 초정밀 캐소드 패터닝 기술을 더욱 고도화하여 화질 및 카메라 성능의 초격차를 유지해야 함.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 91-3</span>
+            
+
+<h3>제목</h3>
+<li>Drive Circuit and Optical Co-Design for High-Performance Under-Display Infrared Recognition</li>
+
+<h3>저자</h3>
+<li>Miao Chang, Lifang Wang, Xingxing Yang, Hongsen Zhang, Qinggang Liu</li>
+
+<h3>소속</h3>
+<li>Hefei Govisionox Technology Co., Ltd. (Visionox 계열사)</li>
+<li>Visionox Technology Inc.</li>
+
+<h3>시사점</h3>
+<li>비전옥스(Visionox)는 가시광선 카메라를 넘어 보안에 필수적인 3D 안면 인식용 '적외선(IR) 센서 하향 기술(Under-Display IR)'을 위한 회로-광학 공동 설계안을 제시함.</li>
+<li>디스플레이 배선(특히 VSS 레이어)이 적외선의 투과를 방해하고 회절을 일으켜 IR 이미지의 SNR을 떨어뜨리는 문제를 해결하기 위해 다음과 같은 혁신 기술을 적용:</li>
+     - **대칭형 구멍 설계**: VSS 레이어의 불투명 영역을 원형 또는 팔각형으로 설계하여 특정 방향으로의 회절을 억제하고 0차 회절 에너지(직진 광)를 집중시킴.
+     - **분산형 미세 배선**: 굵은 신호선 대신 여러 개의 얇은 배선으로 나누어 배치(Distributed routing)함으로써 IR 투과가 가능한 개방 면적을 극대화함.
+<li>결과적으로 940nm 파장에서의 0차 회절 효율을 기존 6.5%에서 9% 수준으로 약 40% 향상시켜, 패널 아래에서도 안정적인 IR 인식이 가능함을 입증함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 패널의 전기적 안정성을 유지하는 VSS 레이어를 정밀하게 설계된 '광학 소자'로 재정의하여 UDC 기술의 지평을 적외선 센서 영역으로 확장함. 배선 레이아웃 조정만으로 센서 성능을 높인 점이 매우 실용적이며 양산성이 높음.</li>
+<li>**기술수준 비교**: 당사는 UDC 기술 상용화를 선도하며 적외선 센서의 패널 하향 배치 기술도 고도화하고 있으나, 비전옥스의 '회로-광학 공동 설계' 역량은 당사의 추격자로서 경계해야 할 수준임. 특히 배선 사이의 간격과 굵기 비율(0.4~2.5)을 정밀하게 제어하여 저항 증가를 최소화하면서 투과율을 높인 배선 기술은 당사의 차세대 Face ID 통합 패널 설계 시 핵심적인 벤치마킹 포인트임. 당사 역시 UDC 영역의 회절 강도와 방향성을 제어하기 위한 신규 레이아웃 및 픽셀 구조 확보에 박차를 가해야 함.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 91-4</span>
+            
+
+<h3>제목</h3>
+<li>High Transmittance OLED for Under Display Face Recognition</li>
+
+<h3>저자</h3>
+<li>Chuan xiang Xu, Qi Yao, Hao Wu, Binbin Tong, Xiaohu Li, Shi Shu, Xinhua Liu, Shuilang Dong, Keyi Zhang, Fengjie Zhang</li>
+
+<h3>소속</h3>
+<li>BOE Technology Group Co., LTD.</li>
+
+<h3>시사점</h3>
+<li>BOE는 노치(Notch)나 펀치홀 없이 전면 카메라와 안면 인식 센서를 패널 아래로 숨기는 UDFR(Under-Display Face Recognition) 기술을 위해 고투과 OLED 패널을 개발함.</li>
+<li>적외선(IR) 투과율을 극대화하기 위해 기존 LTPO 구조를 혁신적으로 변경:</li>
+     - **하이브리드 TFT 구조**: IR에 민감하고 투과율이 낮은 LTPS 대신, IR에 둔감하고 고투과 특성을 가진 고이동도 Oxide(MOS) TFT를 스위칭 소자로 대거 채택.
+     - **투명 배선 및 전극**: 게이트, 데이터, EM 라인 등을 금속 대신 투명한 ITO 배선으로 교체하고, 캐소드(Cathode)를 정밀하게 패터닝하여 IR 경로 확보.
+     - **고투과 COE**: IR 투과율이 90% 이상인 신규 블랙 매트릭스(BM) 및 컬러필터 재료(COE) 적용.
+<li>결과적으로 6.0인치 FHD 프로토타입에서 29.64%라는 경이로운 IR 투과율을 달성하여 안정적인 안면 인식을 가능케 함.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: UDC 기술의 궁극적인 목표인 '완전한 풀 스크린'을 위해 적외선 센서의 간섭 문제를 물리적/회로적으로 완벽히 분석하고 해결책을 제시함. 특히 픽셀 회로 내에서 LTPS와 Oxide의 역할을 분담시켜 화질과 투과율의 토끼를 동시에 잡은 'In-situ' 픽셀 설계 기술이 돋보임.</li>
+<li>**기술수준 비교**: 당사는 UDC 상용화에서 앞서 있으나, BOE가 달성한 30%에 육박하는 IR 투과율은 당사의 현재 양산 수준을 위협할 수 있는 고성능 스펙임. 당사 역시 UDC 영역의 화질 저하를 막기 위해 투명 배선 및 캐소드 패터닝 기술을 고도화하고 있으나, BOE의 'Oxide 스위칭 TFT' 전략은 공정 복잡도를 줄이면서도 IR 센서 감도를 획기적으로 높일 수 있는 강력한 벤치마킹 포인트임. 향후 당사의 차세대 안면 인식 통합 패널 로드맵 수립 시, 이러한 하이브리드 소자 및 고투과 기능성 유기막 기술의 선제적 확보가 필수적임.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 98-1</span>
+            
+
+<h3>제목</h3>
+<li>Real In-cell Integrated Touch Sensor for Flexible OLED Display</li>
+
+<h3>저자</h3>
+<li>Lihua Wang, Xianqing Yang, Junhui Lou, Xiaolong Ji, Haijing Shen, Yunfei Bai, Jiachuan Liu, Lingxiao Du, Haifeng Lu, Rubo Xing, Xiujian Zhu</li>
+
+<h3>소속</h3>
+<li>Visionox Technology Inc., China</li>
+
+<h3>시사점</h3>
+<li>비전옥스(Visionox)는 기존 온셀(On-cell, 당사 Y-OCTA 등) 방식을 넘어선 진정한 '인셀(In-cell)' 터치 센서를 유연 OLED 패널에 구현함.</li>
+<li>OLED의 공통 전극인 캐소드(Cathode)가 터치 전극의 전기장을 차단하는 문제를 해결하기 위해, 역테이퍼(Reverse-tapered) 형태의 '언더컷(Undercut) 절연 구조'를 도입하여 캐소드를 디스플레이 영역과 터치 센싱 영역으로 물리적으로 분리(Segment)함.</li>
+<li>이를 통해 TFE(박막봉지) 상단의 터치 전극 증착 공정을 생략하여 모듈 두께를 줄이고 광 투과율을 높였으며, 마스크 공정 1회를 단축하여 제조 원가를 절감함.</li>
+<li>언더컷 구조의 두께를 1.2μm에서 2.5μm로 최적화하여 기생 커패시턴스를 22% 줄이고 터치 감도(SNR)를 40% 이상 향상시킴.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 터치 기능을 패널 봉지층 위에 얹는 것이 아니라, 패널 제조 공정(Array) 내에서 캐소드 패터닝을 통해 내재화한 혁신적인 사례임. 이는 스마트워치와 같은 초소형/초경량 웨어러블 기기에서 두께와 전력 효율의 한계를 돌파할 수 있는 기술적 기반을 제공함.</li>
+<li>**기술수준 비교**: 당사의 Y-OCTA 기술은 스마트폰 시장의 표준이나, 비전옥스의 인셀 방식은 공정 간소화 측면에서 잠재적인 경쟁 우위를 가질 수 있음. 특히 캐소드 쉴딩 문제를 물리적 구조(Undercut)로 해결한 것은 당사의 차세대 터치 전략에서 반드시 분석해야 할 요소임. 다만, 대면적 스마트폰이나 폴더블 패널로 확대할 경우 캐소드 저항 증가에 따른 화질 저하 및 터치 노이즈 문제가 발생할 수 있으므로, 비전옥스가 이를 어떻게 극복할지가 관건임. 비전옥스의 언더컷 두께 제어를 통한 SNR 확보 기술은 당사의 초슬림 터치 패널 설계 시 중요한 벤치마킹 포인트임.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>        <div class="card" onclick="copyToClipboard(this)">
+            <span class="session-tag">Session 98-2</span>
+            
+
+<h3>제목</h3>
+<li>TDDI-Based Charge-Sensing for Aftermarket Defect-Detection in OLED Pixel Circuit with Internal Charging Process</li>
+
+<h3>저자</h3>
+<li>Chien-Ju Lai, En Tsung, Hsin-Yuan Chang, Ya-Hsiang Tai, Hua-Wei Liu, Chih-Chang Lai, Chun-Yi Chou</li>
+
+<h3>소속</h3>
+<li>National Yang Ming Chiao Tung University (대만)</li>
+<li>Novatek Microelectronics Corp. (대만 노바텍)</li>
+
+<h3>시사점</h3>
+<li>대만 노바텍과 양명교통대는 OLED 패널이 완제품으로 조립된 이후(Aftermarket) 발생할 수 있는 픽셀 회로의 결함을 외부 장비 없이 스스로 찾아내는 자가 진단 기술을 발표함.</li>
+<li>기존의 TDDI(Touch and Display Driver Integration) 아키텍처를 활용하여, 패널 내부의 픽셀 구동 신호들을 재사용해 저장 커패시턴스(Cst)에 전하를 충전하고 이를 TDDI의 AFE(Analog Front-End)를 통해 읽어내는 방식임.</li>
+<li>분석 결과, 픽셀 내 단선(Open)이나 단락(Short) 발생 시 AFE 출력 파형이 정상 상태와 뚜렷하게 다르게 나타남을 확인하여 실시간 결함 탐지가 가능함을 입증함.</li>
+<li>고가의 프리미엄 OLED 제품에서 사용 중 발생하는 소자 열화나 회로 결함을 신속하게 진단하여 수리 효율성을 높일 수 있는 실용적인 솔루션임.</li>
+
+<h3>본기술의 의의 당사 기술수준과 비교</h3>
+<li>**의의**: 패널 제조 공정 중의 검사를 넘어, 소비자 사용 단계에서의 패널 신뢰성을 구동 IC 레벨에서 관리할 수 있는 '스마트 자가 진단' 시대를 열었다는 점에 큰 의의가 있음. 특히 애플(Apple)의 8T1C 복잡한 픽셀 회로를 타겟으로 기술을 검증하여 상용화 가능성을 높임.</li>
+<li>**기술수준 비교**: 당사는 패널의 화질 보정 및 열화 제어 분야에서 세계 최고의 노하우를 보유하고 있으나, 범용 구동 IC 시장의 강자인 노바텍이 이러한 정밀 진단 기능을 IC 내부에 표준화하여 제공하려는 움직임은 경계해야 함. 삼성디스플레이 역시 구동 IC 업체와의 긴밀한 협력을 통해, 패널의 상태 정보를 데이터화하여 수명을 예측하고 최적의 화질을 유지하는 인텔리전트 구동 솔루션을 더욱 강화해야 함. 노바텍의 전하 센싱 기반 결함 탐지 알고리즘은 당사의 차세대 센서 통합 패널(Sensor-in-Panel) 및 구동 IC 로드맵에 반영해야 할 핵심 기술 요소임.</li>
+
+            <button class="btn-copy">Copy for PPT</button>
+        </div>    </div>
+    <script>
+        function copyToClipboard(card) {
+            const text = card.innerText.replace('Copy for PPT', '').trim();
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = card.querySelector('.btn-copy');
+                const originalText = btn.innerText;
+                btn.innerText = 'Copied!';
+                btn.style.background = '#34c759';
+                btn.style.color = 'white';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.background = '#eee';
+                    btn.style.color = '#1d1d1f';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
